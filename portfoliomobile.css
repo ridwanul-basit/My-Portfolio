@@ -1,0 +1,5 @@
+[class*="col-"]{width:100%;}
+.nav-head{text-align: center;}
+.nav-menu{display:flex;flex-direction: column; margin:10px 0px;padding:10px;}
+.aboutme-dsc p{text-align: center;}
+.media .btn{font-size:32px;padding:5px;margin:10px;width:50%;border-radius: 100px;}
