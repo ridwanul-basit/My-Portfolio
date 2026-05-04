@@ -8,15 +8,33 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate API call
-    setTimeout(() => {
+    
+    const formData = new FormData(e.target as HTMLFormElement);
+    formData.append("access_key", "4477b1bf-0e5f-4b6c-958c-3e0d8e8c37b9"); 
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setIsSuccess(true);
+        (e.target as HTMLFormElement).reset();
+        setTimeout(() => setIsSuccess(false), 5000);
+      } else {
+        alert("Error: " + data.message);
+      }
+    } catch (error) {
+      alert("An error occurred. Please try again later.");
+    } finally {
       setIsSubmitting(false);
-      setIsSuccess(true);
-      setTimeout(() => setIsSuccess(false), 5000);
-    }, 1500);
+    }
   };
 
   return (
@@ -107,6 +125,7 @@ export default function Contact() {
                   <input 
                     type="text" 
                     id="name" 
+                    name="name"
                     required
                     className="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
                     placeholder="John Doe"
@@ -117,6 +136,7 @@ export default function Contact() {
                   <input 
                     type="email" 
                     id="email" 
+                    name="email"
                     required
                     className="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
                     placeholder="john@example.com"
@@ -129,6 +149,7 @@ export default function Contact() {
                 <input 
                   type="text" 
                   id="subject" 
+                  name="subject"
                   required
                   className="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all"
                   placeholder="Project Inquiry"
@@ -139,6 +160,7 @@ export default function Contact() {
                 <label htmlFor="message" className="text-sm font-medium text-slate-300">Message</label>
                 <textarea 
                   id="message" 
+                  name="message"
                   required
                   rows={5}
                   className="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all resize-none"
