@@ -1,0 +1,107 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { ExternalLink, Code2 } from "lucide-react";
+
+export default function Projects() {
+  const projects = [
+    {
+      title: "Giant BD ERP",
+      description: "Enterprise Resource Planning (ERP) system designed to manage business operations efficiently. Supports scalable and modular system architecture.",
+      tech: ["Next.js", "Laravel", "REST API", "Tailwind CSS"],
+      image: "/projects/giant-bd.jpg",
+      github: "#",
+      live: "#",
+    },
+    {
+      title: "Finger Flight",
+      description: "Online Travel Agency (OTA) platform for managing flight bookings with a modern full-stack architecture, user authentication, and dynamic booking.",
+      tech: ["Next.js", "Node.js", "API Integration"],
+      image: "/projects/finger-flight.jpg",
+      github: "#",
+      live: "#",
+    },
+    {
+      title: "STC 360",
+      description: "Full-stack web application with MVC architecture. Implemented authentication, role-based access control, and dynamic data handling.",
+      tech: ["Laravel", "MySQL", "Bootstrap"],
+      image: "/projects/stc-360.jpg",
+      github: "#",
+      live: "#",
+    },
+    {
+      title: "E-Commerce Platform",
+      description: "Scalable e-commerce platform with authentication, product management, and a comprehensive cart system.",
+      tech: ["Next.js", "Node.js", "Express.js", "MongoDB"],
+      image: "/projects/ecommerce.jpg",
+      github: "#",
+      live: "#",
+    },
+    {
+      title: "Online Health Care",
+      description: "Automated appointment system to visit doctors without hassle, and an integrated system to buy authentic medicine.",
+      tech: ["React", "Node.js", "Express", "MongoDB"],
+      image: "/projects/health-care.jpg",
+      github: "#",
+      live: "#",
+    }
+  ];
+
+  return (
+    <section id="projects" className="py-24 px-6 md:px-12">
+      <div className="container mx-auto max-w-6xl">
+        <div className="mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Featured Projects</h2>
+          <div className="w-20 h-1 bg-emerald-500 rounded-full mb-8"></div>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: idx * 0.1 }}
+              className="glass-card rounded-xl overflow-hidden flex flex-col group border border-slate-800 hover:border-slate-600 transition-all"
+            >
+              {/* Image Placeholder */}
+              <div className="relative h-48 w-full bg-slate-800 overflow-hidden flex items-center justify-center">
+                {/* Replace this div with Next.js Image component when images are ready */}
+                <div className="absolute inset-0 bg-gradient-to-br from-slate-700 to-slate-800 opacity-50 group-hover:opacity-30 transition-opacity z-10" />
+                <span className="text-slate-500 font-medium z-20">Image Placeholder (800x600)</span>
+                {/* <Image src={project.image} alt={project.title} fill className="object-cover group-hover:scale-105 transition-transform duration-500" /> */}
+              </div>
+
+              <div className="p-6 flex flex-col flex-grow">
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
+                  {project.title}
+                </h3>
+                <p className="text-slate-400 text-sm mb-6 flex-grow leading-relaxed">
+                  {project.description}
+                </p>
+                
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {project.tech.map((t, i) => (
+                    <span key={i} className="text-xs font-medium text-emerald-400 bg-emerald-400/10 px-2 py-1 rounded">
+                      {t}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="flex gap-4 pt-4 border-t border-slate-700/50">
+                  <a href={project.github} className="text-slate-400 hover:text-white transition-colors flex items-center gap-1.5 text-sm font-medium">
+                    <Code2 size={16} /> Code
+                  </a>
+                  <a href={project.live} className="text-slate-400 hover:text-white transition-colors flex items-center gap-1.5 text-sm font-medium">
+                    <ExternalLink size={16} /> Live Demo
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
