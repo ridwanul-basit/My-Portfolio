@@ -53,7 +53,7 @@ export default function Skills() {
   };
 
   return (
-    <section id="skills" className="py-24 px-6 md:px-12 bg-slate-900/50">
+    <section id="skills" className="py-24 px-6 md:px-12">
       <div className="container mx-auto max-w-5xl">
         <div className="mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Skills & Expertise</h2>
@@ -74,7 +74,7 @@ export default function Skills() {
               className="glass-card p-6 rounded-xl hover:-translate-y-2 transition-transform duration-300"
             >
               <div className="flex items-center gap-3 mb-6">
-                <div className="p-3 bg-slate-800 rounded-lg">
+                <div className="p-3 bg-white/5 rounded-lg">
                   {category.icon}
                 </div>
                 <h3 className="text-xl font-bold text-white">{category.title}</h3>

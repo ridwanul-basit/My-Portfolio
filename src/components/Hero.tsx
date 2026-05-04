@@ -34,7 +34,7 @@ export default function Hero() {
             I build scalable, modern web applications specializing in E-commerce,
             ERP, and OTA platforms using Next.js and Laravel.
           </p>
-          
+
           <div className="flex flex-wrap gap-4">
             <a
               href="#projects"

@@ -60,7 +60,7 @@ export default function Contact() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-slate-400 max-w-2xl mx-auto"
+            className="text-slate-600 max-w-2xl mx-auto"
           >
             I&apos;m currently looking for new opportunities. Whether you have a question or just want to say hi, I&apos;ll try my best to get back to you!
           </motion.p>
@@ -75,36 +75,36 @@ export default function Contact() {
             className="md:col-span-2 space-y-8"
           >
             <div className="flex items-start gap-4">
-              <div className="p-4 bg-slate-800 rounded-xl text-blue-400">
+              <div className="p-4 bg-blue-50 rounded-xl text-blue-600 border border-blue-100">
                 <Mail size={24} />
               </div>
               <div>
                 <h3 className="text-lg font-bold text-white mb-1">Email</h3>
-                <a href="mailto:ridwanulbasit32@gmail.com" className="text-slate-400 hover:text-blue-400 transition-colors">
+                <a href="mailto:ridwanulbasit32@gmail.com" className="text-slate-600 hover:text-blue-600 transition-colors">
                   ridwanulbasit32@gmail.com
                 </a>
               </div>
             </div>
 
             <div className="flex items-start gap-4">
-              <div className="p-4 bg-slate-800 rounded-xl text-emerald-400">
+              <div className="p-4 bg-emerald-50 rounded-xl text-emerald-600 border border-emerald-100">
                 <Phone size={24} />
               </div>
               <div>
                 <h3 className="text-lg font-bold text-white mb-1">Phone</h3>
-                <a href="tel:+8801756425539" className="text-slate-400 hover:text-emerald-400 transition-colors">
+                <a href="tel:+8801756425539" className="text-slate-600 hover:text-emerald-600 transition-colors">
                   +880 1756-425539
                 </a>
               </div>
             </div>
 
             <div className="flex items-start gap-4">
-              <div className="p-4 bg-slate-800 rounded-xl text-purple-400">
+              <div className="p-4 bg-purple-50 rounded-xl text-purple-600 border border-purple-100">
                 <MapPin size={24} />
               </div>
               <div>
                 <h3 className="text-lg font-bold text-white mb-1">Location</h3>
-                <p className="text-slate-400">
+                <p className="text-slate-600">
                   Dhaka, Bangladesh
                 </p>
               </div>
@@ -121,7 +121,7 @@ export default function Contact() {
             <form onSubmit={handleSubmit} className="glass-card p-8 rounded-2xl space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label htmlFor="name" className="text-sm font-medium text-slate-300">Your Name</label>
+                  <label htmlFor="name" className="text-sm font-medium text-slate-600">Your Name</label>
                   <input 
                     type="text" 
                     id="name" 
@@ -132,7 +132,7 @@ export default function Contact() {
                   />
                 </div>
                 <div className="space-y-2">
-                  <label htmlFor="email" className="text-sm font-medium text-slate-300">Your Email</label>
+                  <label htmlFor="email" className="text-sm font-medium text-slate-600">Your Email</label>
                   <input 
                     type="email" 
                     id="email" 
