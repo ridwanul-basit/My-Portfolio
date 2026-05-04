@@ -6,23 +6,23 @@ import { Code, Database, Layout, Server, Terminal, Wrench } from "lucide-react";
 export default function Skills() {
   const skillCategories = [
     {
-      title: "Frontend",
-      icon: <Layout className="text-blue-400" size={24} />,
-      skills: ["React.js", "Next.js", "Tailwind CSS", "shadcn/ui", "HTML", "CSS"],
+      title: "Frontend Development",
+      icon: <Layout className="text-orange-500" size={24} />,
+      skills: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Redux"],
     },
     {
-      title: "Backend",
-      icon: <Server className="text-emerald-400" size={24} />,
-      skills: ["Node.js", "Express.js", "Nest Js", "Laravel", "Socket.io"],
+      title: "Backend Development",
+      icon: <Server className="text-orange-500" size={24} />,
+      skills: ["Laravel", "Node.js", "Express.js", "NestJS", "PHP"],
     },
     {
-      title: "Database",
-      icon: <Database className="text-purple-400" size={24} />,
-      skills: ["MongoDB", "MySQL", "PostgreSQL"],
+      title: "Database & DevOps",
+      icon: <Database className="text-orange-500" size={24} />,
+      skills: ["PostgreSQL", "MySQL", "MongoDB", "Docker", "AWS"],
     },
     {
       title: "Programming",
-      icon: <Terminal className="text-orange-400" size={24} />,
+      icon: <Terminal className="text-orange-500" size={24} />,
       skills: ["JavaScript", "TypeScript", "Python", "PHP", "C++", "SQL"],
     },
     {
@@ -55,9 +55,12 @@ export default function Skills() {
   return (
     <section id="skills" className="py-24 px-6 md:px-12">
       <div className="container mx-auto max-w-5xl">
-        <div className="mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Skills & Expertise</h2>
-          <div className="w-20 h-1 bg-blue-500 rounded-full mb-8"></div>
+        <div className="mb-16">
+          <div className="flex items-center gap-3 mb-2">
+            <span className="text-orange-500 font-mono text-sm">03.</span>
+            <h2 className="text-3xl md:text-5xl font-bold text-white uppercase tracking-tighter">Skills</h2>
+          </div>
+          <div className="w-20 h-1 bg-orange-500 rounded-full"></div>
         </div>
 
         <motion.div
@@ -65,26 +68,26 @@ export default function Skills() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid md:grid-cols-2 gap-8"
         >
-          {skillCategories.map((category, idx) => (
+          {skillCategories.map((category) => (
             <motion.div
-              key={idx}
+              key={category.title}
               variants={itemVariants}
-              className="glass-card p-6 rounded-xl hover:-translate-y-2 transition-transform duration-300"
+              className="tech-card p-8 rounded-2xl hover:border-orange-500/50 transition-all group"
             >
-              <div className="flex items-center gap-3 mb-6">
-                <div className="p-3 bg-white/5 rounded-lg">
+              <div className="flex items-center gap-4 mb-8">
+                <div className="p-3 bg-orange-500/10 text-orange-500 rounded-xl group-hover:scale-110 transition-transform">
                   {category.icon}
                 </div>
-                <h3 className="text-xl font-bold text-white">{category.title}</h3>
+                <h3 className="text-2xl font-bold text-white uppercase tracking-tight">{category.title}</h3>
               </div>
 
               <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill, i) => (
                   <span
                     key={i}
-                    className="px-3 py-1 bg-slate-800 border border-slate-700 text-slate-300 rounded-md text-sm font-medium hover:border-blue-500 hover:text-white transition-colors cursor-default"
+                    className="px-3 py-1 bg-white/5 border border-white/10 text-slate-400 rounded-md text-sm font-mono uppercase tracking-widest hover:border-orange-500 hover:text-white transition-all cursor-default"
                   >
                     {skill}
                   </span>

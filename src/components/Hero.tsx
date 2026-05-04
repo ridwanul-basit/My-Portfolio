@@ -11,9 +11,10 @@ export default function Hero() {
       id="home"
       className="min-h-screen flex items-center justify-center pt-20 pb-12 px-6 md:px-12 relative overflow-hidden"
     >
-      {/* Background gradients */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-emerald-500/20 rounded-full blur-[120px] pointer-events-none" />
+      {/* Vertical Decorative Name Watermark */}
+      <div className="absolute -right-12 top-1/2 -translate-y-1/2 hidden xl:block select-none pointer-events-none">
+        <span className="text-vertical text-[12rem] font-black text-white/5 uppercase tracking-tighter">BASIT</span>
+      </div>
 
       <div className="container mx-auto max-w-5xl z-10 grid md:grid-cols-2 gap-12 items-center">
         <motion.div
@@ -21,57 +22,51 @@ export default function Hero() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <span className="inline-block py-1 px-3 rounded-full bg-slate-800 text-blue-400 text-sm font-semibold tracking-wider mb-6 border border-slate-700">
-            SOFTWARE ENGINEER
-          </span>
-          <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
-            Hi, I&apos;m <br />
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-emerald-400 to-blue-400 bg-[length:200%_auto] animate-gradient">
-              Md. Ridwanul Basit
+          <div className="flex items-center gap-3 mb-6">
+            <span className="text-orange-500 font-mono text-sm tracking-widest uppercase">00. Introduction</span>
+            <div className="w-12 h-px bg-orange-500/30"></div>
+          </div>
+          <h1 className="text-5xl md:text-8xl font-bold leading-tight mb-8 tracking-tighter text-white">
+            Hi, I am <br />
+            <span className="text-orange-500 drop-shadow-[0_0_15px_rgba(249,115,22,0.3)]">
+              Ridwanul Basit
             </span>
           </h1>
-          <p className="text-lg md:text-xl text-slate-400 mb-8 max-w-lg leading-relaxed">
-            I build scalable, modern web applications specializing in E-commerce,
-            ERP, and OTA platforms using Next.js and Laravel.
+          <p className="text-lg md:text-xl text-slate-400 mb-10 max-w-lg leading-relaxed font-light">
+            I build scalable, modern web applications specializing in <span className="text-white">E-commerce</span>, <span className="text-white">ERP</span>, and <span className="text-white">OTA</span> platforms using <span className="text-white border-b border-orange-500/50">Next.js</span>, <span className="text-white">Nest Js</span> and <span className="text-white border-b border-orange-500/50">Laravel</span>.
           </p>
 
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-6">
             <a
               href="#projects"
-              className="px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-medium flex items-center gap-2 transition-all hover:gap-3"
+              className="px-8 py-4 bg-orange-500 hover:bg-orange-600 text-[#121212] font-black uppercase tracking-widest transition-all hover:translate-x-2"
             >
-              View Projects <ArrowRight size={18} />
+              View Projects
             </a>
             <a
               href="/CV.pdf"
               download
-              className="px-6 py-3 rounded-lg border border-blue-500/50 text-blue-400 hover:bg-blue-500/10 font-medium transition-all flex items-center gap-2"
+              className="px-8 py-4 border border-white/10 hover:border-orange-500 text-white font-bold uppercase tracking-widest transition-all"
             >
-              Download CV
+              Get My CV
             </a>
           </div>
 
-          <div className="mt-10 flex items-center gap-6">
-            <a href="https://github.com/ridwanul-basit" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition-colors" aria-label="GitHub">
-              <FaGithub size={24} />
-            </a>
-            <a href="https://linkedin.com/in/md-ridwanul-basit" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition-colors" aria-label="LinkedIn">
-              <FaLinkedin size={24} />
-            </a>
-          </div>
+
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
+          initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative hidden md:block"
+          className="relative order-first md:order-last mb-12 md:mb-0"
         >
-          <div className="aspect-square w-full max-w-md mx-auto relative">
-            <div className="absolute inset-0 bg-gradient-to-tr from-blue-500 to-emerald-500 rounded-full blur-2xl opacity-20 animate-pulse" />
-            <div className="absolute inset-4 rounded-full border border-slate-700 bg-slate-800/50 backdrop-blur-sm overflow-hidden flex items-center justify-center">
-              <Image src="/profile.jpg" alt="Md. Ridwanul Basit" fill className="object-cover" priority />
+          <div className="aspect-square w-full max-w-md mx-auto relative group">
+            <div className="absolute inset-0 border-2 border-orange-500/20 translate-x-4 translate-y-4 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform" />
+            <div className="absolute inset-0 bg-[#1e1e1e] border border-white/5 overflow-hidden">
+              <img src="/profile.jpg" alt="Md. Ridwanul Basit" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
             </div>
+            <div className="absolute -bottom-6 -left-6 w-32 h-32 border-l-2 border-b-2 border-orange-500" />
           </div>
         </motion.div>
       </div>

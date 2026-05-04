@@ -28,7 +28,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-slate-900/80 backdrop-blur-md shadow-lg py-3"
+          ? "bg-[#121212]/90 backdrop-blur-md shadow-lg py-3 border-b border-white/5"
           : "bg-transparent py-5"
       }`}
     >
@@ -37,15 +37,15 @@ export default function Navbar() {
           href="#"
           className="flex items-center gap-4 group"
         >
-          <div className="w-16 h-16 rounded-full border-2 border-blue-500 overflow-hidden relative group-hover:scale-110 transition-transform shadow-[0_0_20px_rgba(59,130,246,0.3)] bg-slate-800">
+          <div className="w-16 h-16 rounded-full border-2 border-orange-500 overflow-hidden relative group-hover:scale-110 transition-transform shadow-[0_0_20px_rgba(249,115,22,0.2)] bg-[#1e1e1e]">
             <img 
               src="/profile.jpg" 
               alt="Logo" 
               className="w-full h-full object-cover [image-rendering:-webkit-optimize-contrast]" 
             />
           </div>
-          <span className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
-            Basit.
+          <span className="text-xl font-bold text-white group-hover:text-orange-500 transition-colors font-mono tracking-tighter">
+            BASIT.
           </span>
         </a>
 
@@ -78,7 +78,7 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="absolute top-full left-0 w-full bg-slate-900/95 backdrop-blur-xl border-b border-slate-800 py-4 flex flex-col items-center gap-4 md:hidden shadow-xl"
+            className="absolute top-full left-0 w-full bg-[#121212]/95 backdrop-blur-xl border-b border-white/5 py-8 flex flex-col items-center gap-6 md:hidden shadow-2xl"
           >
             {navLinks.map((link) => (
               <a
