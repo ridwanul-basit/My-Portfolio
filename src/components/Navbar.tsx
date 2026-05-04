@@ -35,9 +35,18 @@ export default function Navbar() {
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
         <a
           href="#"
-          className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-emerald-400"
+          className="flex items-center gap-4 group"
         >
-          MB.
+          <div className="w-16 h-16 rounded-full border-2 border-blue-500 overflow-hidden relative group-hover:scale-110 transition-transform shadow-[0_0_20px_rgba(59,130,246,0.3)] bg-slate-800">
+            <img 
+              src="/profile.jpg" 
+              alt="Logo" 
+              className="w-full h-full object-cover [image-rendering:-webkit-optimize-contrast]" 
+            />
+          </div>
+          <span className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
+            Basit.
+          </span>
         </a>
 
         {/* Desktop Nav */}

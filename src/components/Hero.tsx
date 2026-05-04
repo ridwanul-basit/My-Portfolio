@@ -40,13 +40,14 @@ export default function Hero() {
               href="#projects"
               className="px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-700 text-white font-medium flex items-center gap-2 transition-all hover:gap-3"
             >
-              View My Work <ArrowRight size={18} />
+              View Projects <ArrowRight size={18} />
             </a>
             <a
-              href="#contact"
-              className="px-6 py-3 rounded-lg bg-slate-800 hover:bg-slate-700 text-white font-medium border border-slate-700 transition-all flex items-center gap-2"
+              href="/CV.pdf"
+              download
+              className="px-6 py-3 rounded-lg border border-blue-500/50 text-blue-400 hover:bg-blue-500/10 font-medium transition-all flex items-center gap-2"
             >
-              Contact Me
+              Download CV
             </a>
           </div>
 
