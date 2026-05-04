@@ -32,7 +32,7 @@ export default function Projects() {
       image: "/projects/STC360.png",
       hasImage: true,
       github: "#",
-      live: "#",
+      live: "https://www.stc360.co/",
     },
     {
       title: "E-Commerce Platform",
@@ -40,7 +40,7 @@ export default function Projects() {
       tech: ["Next.js", "Node.js", "Express.js", "MongoDB"],
       image: "/projects/E-commerce.png",
       hasImage: true,
-      github: "#",
+      github: "https://github.com/ridwanul-basit/E-commerce-with-Next-Js",
       live: "#",
     },
     {
@@ -49,13 +49,13 @@ export default function Projects() {
       tech: ["React", "Node.js", "Express", "MongoDB"],
       image: "/projects/health-care.jpg",
       hasImage: false,
-      github: "#",
+      github: "https://github.com/ridwanul-basit/Online-Health-Care",
       live: "#",
     }
   ];
 
   return (
-    <section id="projects" className="py-24 px-6 md:px-12">
+    <section id="projects" key="projects-section" className="py-24 px-6 md:px-12">
       <div className="container mx-auto max-w-6xl">
         <div className="mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Featured Projects</h2>
@@ -64,12 +64,8 @@ export default function Projects() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
+            <div
+              key={project.title}
               className="glass-card rounded-xl overflow-hidden flex flex-col group border border-slate-800 hover:border-slate-600 transition-all"
             >
               <div className="w-full overflow-hidden border-b border-slate-700/50">
@@ -102,15 +98,15 @@ export default function Projects() {
                 </div>
 
                 <div className="flex gap-4 pt-4 border-t border-slate-700/50">
-                  <a href={project.github} className="text-slate-400 hover:text-white transition-colors flex items-center gap-1.5 text-sm font-medium">
+                  <a href={project.github} target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition-colors flex items-center gap-1.5 text-sm font-medium">
                     <FaGithub size={16} /> Code
                   </a>
-                  <a href={project.live} className="text-slate-400 hover:text-white transition-colors flex items-center gap-1.5 text-sm font-medium">
+                  <a href={project.live} target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition-colors flex items-center gap-1.5 text-sm font-medium">
                     <ExternalLink size={16} /> Live Demo
                   </a>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

@@ -22,12 +22,7 @@ export default function Experience() {
   return (
     <section id="experience" className="py-24 px-6 md:px-12 relative">
       <div className="container mx-auto max-w-4xl">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
+        <div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Experience</h2>
           <div className="w-20 h-1 bg-emerald-500 rounded-full mb-12"></div>
 
@@ -73,7 +68,7 @@ export default function Experience() {
               </div>
             ))}
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

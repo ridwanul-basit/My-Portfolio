@@ -7,13 +7,7 @@ export default function About() {
   return (
     <section id="about" className="py-24 px-6 md:px-12 bg-slate-900/50">
       <div className="container mx-auto max-w-5xl">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mb-12"
-        >
+        <div className="mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
           <div className="w-20 h-1 bg-blue-500 rounded-full mb-8"></div>
           
@@ -73,7 +67,7 @@ export default function About() {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
