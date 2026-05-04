@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Code2, Briefcase } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import Image from "next/image";
 
 export default function Hero() {
@@ -51,10 +52,10 @@ export default function Hero() {
 
           <div className="mt-10 flex items-center gap-6">
             <a href="https://github.com/ridwanul-basit" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition-colors" aria-label="GitHub">
-              <Code2 size={24} />
+              <FaGithub size={24} />
             </a>
             <a href="https://linkedin.com/in/md-ridwanul-basit" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition-colors" aria-label="LinkedIn">
-              <Briefcase size={24} />
+              <FaLinkedin size={24} />
             </a>
           </div>
         </motion.div>

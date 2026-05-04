@@ -32,11 +32,31 @@ export default function About() {
                 <div className="p-3 bg-blue-500/10 text-blue-400 rounded-lg">
                   <GraduationCap size={24} />
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold text-white mb-1">Education</h3>
-                  <p className="text-slate-300 font-medium">B.Sc. in Computer Science & Engineering</p>
-                  <p className="text-slate-400 text-sm">BRAC University • Sep 2022 - Present</p>
-                  <p className="text-slate-400 text-sm mt-1">Dhaka, Bangladesh</p>
+                <div className="w-full">
+                  <h3 className="text-xl font-bold text-white mb-4">Education</h3>
+                  
+                  <div className="space-y-4">
+                    <div className="relative pl-4 border-l-2 border-slate-700">
+                      <div className="absolute w-2 h-2 bg-blue-500 rounded-full -left-[5px] top-1.5"></div>
+                      <p className="text-slate-300 font-medium">B.Sc. in Computer Science & Engineering</p>
+                      <p className="text-slate-400 text-sm">BRAC University • Sep 2022 - Present</p>
+                      <p className="text-slate-500 text-xs mt-0.5">Dhaka, Bangladesh</p>
+                    </div>
+
+                    <div className="relative pl-4 border-l-2 border-slate-700">
+                      <div className="absolute w-2 h-2 bg-emerald-500 rounded-full -left-[5px] top-1.5"></div>
+                      <p className="text-slate-300 font-medium">Higher Secondary Certificate (HSC)</p>
+                      <p className="text-slate-400 text-sm">Govt. Azizul Haque College • 2018 - 2020</p>
+                      <p className="text-slate-500 text-xs mt-0.5">Bogura, Bangladesh • GPA: 5.00</p>
+                    </div>
+
+                    <div className="relative pl-4 border-l-2 border-slate-700">
+                      <div className="absolute w-2 h-2 bg-purple-500 rounded-full -left-[5px] top-1.5"></div>
+                      <p className="text-slate-300 font-medium">Secondary School Certificate (SSC)</p>
+                      <p className="text-slate-400 text-sm">Bogura Zilla School • 2010 - 2018</p>
+                      <p className="text-slate-500 text-xs mt-0.5">Bogura, Bangladesh • GPA: 5.00</p>
+                    </div>
+                  </div>
                 </div>
               </div>
 

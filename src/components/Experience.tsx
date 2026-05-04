@@ -44,7 +44,10 @@ export default function Experience() {
                   <div className="md:w-[45%] text-left mb-4 md:mb-0">
                     <h3 className="text-2xl font-bold text-white mb-1">{exp.role}</h3>
                     <div className="text-blue-400 font-medium text-lg flex items-center gap-2 mb-2">
-                      <Briefcase size={18} /> {exp.company}
+                      <Briefcase size={18} /> 
+                      <a href="https://trendsbird.com/" target="_blank" rel="noreferrer" className="hover:text-blue-300 hover:underline transition-all">
+                        {exp.company}
+                      </a>
                     </div>
                   </div>
 

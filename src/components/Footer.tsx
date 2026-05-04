@@ -1,4 +1,4 @@
-import { Code2, Briefcase } from "lucide-react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -11,11 +11,11 @@ export default function Footer() {
         <div className="flex items-center gap-6">
           <a href="https://github.com/ridwanul-basit" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition-colors">
             <span className="sr-only">GitHub</span>
-            <Code2 size={20} />
+            <FaGithub size={20} />
           </a>
           <a href="https://linkedin.com/in/md-ridwanul-basit" target="_blank" rel="noreferrer" className="text-slate-400 hover:text-white transition-colors">
             <span className="sr-only">LinkedIn</span>
-            <Briefcase size={20} />
+            <FaLinkedin size={20} />
           </a>
         </div>
       </div>

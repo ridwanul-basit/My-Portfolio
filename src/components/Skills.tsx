@@ -13,7 +13,7 @@ export default function Skills() {
     {
       title: "Backend",
       icon: <Server className="text-emerald-400" size={24} />,
-      skills: ["Node.js", "Express.js", "Laravel", "Socket.io"],
+      skills: ["Node.js", "Express.js", "Nest Js", "Laravel", "Socket.io"],
     },
     {
       title: "Database",
@@ -79,7 +79,7 @@ export default function Skills() {
                 </div>
                 <h3 className="text-xl font-bold text-white">{category.title}</h3>
               </div>
-              
+
               <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill, i) => (
                   <span
