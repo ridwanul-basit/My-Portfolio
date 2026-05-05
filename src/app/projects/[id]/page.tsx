@@ -2,7 +2,7 @@
 
 import { useParams, useRouter } from "next/navigation";
 import { projects } from "@/data/projects";
-import { ArrowLeft, ExternalLink, CheckCircle2, Trophy } from "lucide-react";
+import { ArrowLeft, ExternalLink, CheckCircle2, Trophy, Info } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
@@ -23,6 +23,68 @@ export default function ProjectDetails() {
       </div>
     );
   }
+
+  const renderDemoButton = () => {
+    if (project.demoStatus === "private") {
+      return (
+        <div className="group relative">
+          <button className="px-8 py-4 bg-slate-800 text-slate-500 font-bold uppercase tracking-widest cursor-not-allowed flex items-center gap-2">
+            Live Demo <Info size={16} />
+          </button>
+          <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-64 p-3 bg-[#1e1e1e] border border-orange-500/30 text-slate-300 text-xs rounded-lg opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity pointer-events-none z-50 text-center shadow-xl">
+            Company product - privacy concern to show live.
+          </div>
+        </div>
+      );
+    }
+    if (project.demoStatus === "not-live") {
+      return (
+        <div className="group relative">
+          <button className="px-8 py-4 bg-slate-800 text-slate-500 font-bold uppercase tracking-widest cursor-not-allowed flex items-center gap-2">
+            Not Live <Info size={16} />
+          </button>
+          <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-64 p-3 bg-[#1e1e1e] border border-orange-500/30 text-slate-300 text-xs rounded-lg opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity pointer-events-none z-50 text-center shadow-xl">
+            This project is not currently live. Please see the source code for details.
+          </div>
+        </div>
+      );
+    }
+    return (
+      <a 
+        href={project.demo} 
+        target="_blank" 
+        rel="noreferrer" 
+        className="px-8 py-4 bg-orange-500 hover:bg-orange-600 text-[#121212] font-black uppercase tracking-widest transition-all flex items-center gap-2"
+      >
+        Live Demo <ExternalLink size={18} />
+      </a>
+    );
+  };
+
+  const renderCodeButton = () => {
+    if (project.codeStatus === "private") {
+      return (
+        <div className="group relative">
+          <button className="px-8 py-4 border border-white/5 text-slate-600 font-bold uppercase tracking-widest cursor-not-allowed flex items-center gap-2">
+            Source Code <Info size={16} />
+          </button>
+          <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-64 p-3 bg-[#1e1e1e] border border-orange-500/30 text-slate-300 text-xs rounded-lg opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity pointer-events-none z-50 text-center shadow-xl">
+            Company project - privacy concern to show source code.
+          </div>
+        </div>
+      );
+    }
+    return (
+      <a 
+        href={project.github} 
+        target="_blank" 
+        rel="noreferrer" 
+        className="px-8 py-4 border border-white/10 hover:border-orange-500 text-white font-bold uppercase tracking-widest transition-all flex items-center gap-2"
+      >
+        Source Code <FaGithub size={18} />
+      </a>
+    );
+  };
 
   return (
     <main className="min-h-screen bg-[#121212] text-white">
@@ -52,22 +114,8 @@ export default function ProjectDetails() {
               </p>
               
               <div className="flex flex-wrap gap-4">
-                <a 
-                  href={project.demo} 
-                  target="_blank" 
-                  rel="noreferrer" 
-                  className="px-8 py-4 bg-orange-500 hover:bg-orange-600 text-[#121212] font-black uppercase tracking-widest transition-all flex items-center gap-2"
-                >
-                  Live Demo <ExternalLink size={18} />
-                </a>
-                <a 
-                  href={project.github} 
-                  target="_blank" 
-                  rel="noreferrer" 
-                  className="px-8 py-4 border border-white/10 hover:border-orange-500 text-white font-bold uppercase tracking-widest transition-all flex items-center gap-2"
-                >
-                  Source Code <FaGithub size={18} />
-                </a>
+                {renderDemoButton()}
+                {renderCodeButton()}
               </div>
             </div>
 

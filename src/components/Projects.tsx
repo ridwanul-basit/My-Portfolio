@@ -2,7 +2,8 @@
 
 import { projects } from "@/data/projects";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Info } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
 
 export default function Projects() {
   return (
@@ -66,21 +67,35 @@ export default function Projects() {
                     ))}
                   </div>
 
-                  <div className="flex gap-4 pt-4 border-t border-white/5">
+                  <div className="flex gap-4 pt-4 border-t border-white/5 items-center">
                     <Link 
                       href={`/projects/${project.id}`}
                       className="text-orange-500 hover:text-orange-400 transition-colors flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest"
                     >
-                      View Details
+                      Details
                     </Link>
-                    <a 
-                      href={project.github} 
-                      target="_blank" 
-                      rel="noreferrer" 
-                      className="text-slate-500 hover:text-white transition-colors flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest ml-auto"
-                    >
-                      Code
-                    </a>
+                    
+                    <div className="ml-auto flex items-center gap-4">
+                      {project.codeStatus === "private" ? (
+                        <div className="group relative">
+                          <span className="text-slate-600 flex items-center gap-1 text-[10px] font-mono uppercase tracking-widest cursor-help">
+                            Private <Info size={10} />
+                          </span>
+                          <div className="absolute bottom-full right-0 mb-2 w-48 p-2 bg-[#1e1e1e] border border-orange-500/30 text-slate-300 text-[10px] rounded-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50 text-center">
+                            Company project - privacy concern
+                          </div>
+                        </div>
+                      ) : (
+                        <a 
+                          href={project.github} 
+                          target="_blank" 
+                          rel="noreferrer" 
+                          className="text-slate-500 hover:text-white transition-colors flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest"
+                        >
+                          <FaGithub size={14} />
+                        </a>
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>

@@ -11,6 +11,8 @@ export interface Project {
   challenges: string[];
   benefits: string[];
   hasImage: boolean;
+  demoStatus?: "live" | "private" | "not-live";
+  codeStatus?: "public" | "private";
 }
 
 export const projects: Project[] = [
@@ -20,8 +22,8 @@ export const projects: Project[] = [
     description: "Enterprise Resource Planning (ERP) system designed to manage business operations efficiently.",
     fullDescription: "The Giant BD ERP system was developed to manage and streamline the complete business operations of a footwear manufacturing company. In a footwear manufacturing business, multiple departments (production, planning, inventory, sales, etc.) need to work together. This system centralizes all departments, improves efficiency, reduces manual work, and ensures accurate data handling across the organization, solving problems like data inconsistency and tracking delays.",
     image: "/projects/giant-bd.png",
-    github: "https://github.com/ridwanul-basit",
-    demo: "https://bxone0001.pythonanywhere.com/",
+    github: "#",
+    demo: "#",
     tags: ["Next.js", "Nest JS", "REST API", "PostgreSQL"],
     features: [
       "Product Management: Create and manage footwear products with colors, categories, and variations",
@@ -45,6 +47,8 @@ export const projects: Project[] = [
       "Significant reduction in manual work and human error"
     ],
     hasImage: true,
+    demoStatus: "private",
+    codeStatus: "private"
   },
   {
     id: "finger-flight",
@@ -52,8 +56,8 @@ export const projects: Project[] = [
     description: "Online Travel Agency (OTA) platform for managing flight bookings with a modern full-stack architecture.",
     fullDescription: "Finger Flight is a comprehensive Online Travel Agency platform developed to manage all operations of a travel agency in one centralized system. It handles the large volumes of bookings, customer data, and financial transactions that modern agencies deal with daily, solving problems like booking errors and slow customer service through automation and real-time updates.",
     image: "/projects/OTA-1.png",
-    github: "https://github.com/ridwanul-basit",
-    demo: "https://fingerflight.org/",
+    github: "#",
+    demo: "#",
     tags: ["Next.js", "Laravel Api", "API Integration"],
     features: [
       "Flight Booking Management: Search, book, and manage status (pending, confirmed, canceled) with automated ticketing",
@@ -77,6 +81,8 @@ export const projects: Project[] = [
       "Secure and controlled access through role-based permissions"
     ],
     hasImage: true,
+    demoStatus: "private",
+    codeStatus: "private"
   },
   {
     id: "stc-360",
@@ -84,8 +90,8 @@ export const projects: Project[] = [
     description: "Online education platform designed to provide students with access to online classes, courses, and resources.",
     fullDescription: "STC360 is a complete digital learning solution designed to provide students with flexible, accessible, and centralized access to education. It modernizes traditional learning systems by providing a structured environment for course enrollment, live/recorded classes, automated quizzes, and certification, connecting students and administrators through a single efficient system.",
     image: "/projects/STC360.png",
-    github: "https://github.com/ridwanul-basit",
-    demo: "https://stc360.org/",
+    github: "#",
+    demo: "https://www.stc360.co/",
     tags: ["Laravel", "MySQL", "Bootstrap"],
     features: [
       "Online Class System: Support for live and recorded sessions with an organized course-wise structure",
@@ -109,6 +115,8 @@ export const projects: Project[] = [
       "Significantly improved and structured learning experience"
     ],
     hasImage: true,
+    demoStatus: "live",
+    codeStatus: "private"
   },
   {
     id: "janani-fashion",
@@ -116,8 +124,8 @@ export const projects: Project[] = [
     description: "Complete E-commerce system with separate Admin and User panels for global product selling.",
     fullDescription: "This comprehensive E-commerce platform is designed to modernize traditional retail by enabling 24/7 global sales. It features a seamless User Site for customers to browse, customize, and purchase products, alongside a powerful Admin Panel that centralizes product management, order fulfillment, and sales analytics into one automated workflow.",
     image: "/projects/E-commerce.png",
-    github: "https://github.com/ridwanul-basit",
-    demo: "https://jananifashionbd.com/",
+    github: "https://github.com/ridwanul-basit/E-commerce-with-Next-Js",
+    demo: "#",
     tags: ["Next.js", "Tailwind", "Laravel"],
     features: [
       "User Site: Dynamic product browsing with category filtering and real-time variant selection (size, color)",
@@ -141,6 +149,8 @@ export const projects: Project[] = [
       "Data-driven decision making through integrated sales and transaction reports"
     ],
     hasImage: true,
+    demoStatus: "not-live",
+    codeStatus: "public"
   },
   {
     id: "online-health-care",
@@ -148,7 +158,7 @@ export const projects: Project[] = [
     description: "Multi-role healthcare platform for online appointments, medicine sales, and centralized management.",
     fullDescription: "The Online Healthcare Platform is a complete digital solution that bridges the gap between patients, medical professionals, and pharmacies. It solves traditional healthcare challenges like long wait times and poor accessibility by providing a centralized system for online appointment booking, digital medicine purchasing, and streamlined service management.",
     image: "/projects/health.png",
-    github: "https://github.com/ridwanul-basit",
+    github: "https://github.com/ridwanul-basit/Online-Health-Care",
     demo: "#",
     tags: ["PHP", "MySQL", "JavaScript", "HTML/CSS"],
     features: [
@@ -173,5 +183,7 @@ export const projects: Project[] = [
       "Secured and organized data handling for all medical and financial records"
     ],
     hasImage: false,
+    demoStatus: "not-live",
+    codeStatus: "public"
   }
 ];
