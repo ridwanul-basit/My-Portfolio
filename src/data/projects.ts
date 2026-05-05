@@ -126,7 +126,7 @@ export const projects: Project[] = [
     image: "/projects/E-commerce.png",
     github: "https://github.com/ridwanul-basit/E-commerce-with-Next-Js",
     demo: "#",
-    tags: ["Next.js", "Tailwind", "Laravel"],
+    tags: ["Next.js", "Node.js", "Express.js", "MongoDB"],
     features: [
       "User Site: Dynamic product browsing with category filtering and real-time variant selection (size, color)",
       "Shopping Cart & Checkout: Full cart management with coupon code support and secure multi-method payments",
@@ -160,7 +160,7 @@ export const projects: Project[] = [
     image: "/projects/health.png",
     github: "https://github.com/ridwanul-basit/Online-Health-Care",
     demo: "#",
-    tags: ["PHP", "MySQL", "JavaScript", "HTML/CSS"],
+    tags: ["React", "Node.js", "Express.js", "MongoDB"],
     features: [
       "Appointment System: Seamless booking, cancellation, and rescheduling engine for patients and doctors",
       "Medicine E-commerce: Full marketplace for pharmacies to list medicines and for patients to purchase them",
