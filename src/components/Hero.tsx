@@ -9,7 +9,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center pt-20 pb-12 px-6 md:px-12 relative overflow-hidden"
+      className="min-h-screen flex items-center justify-center pt-32 md:pt-20 pb-12 px-6 md:px-12 relative overflow-hidden"
     >
       {/* Vertical Decorative Name Watermark */}
       <div className="absolute -right-12 top-1/2 -translate-y-1/2 hidden xl:block select-none pointer-events-none">
@@ -33,7 +33,7 @@ export default function Hero() {
             </span>
           </h1>
           <p className="text-lg md:text-xl text-slate-400 mb-10 max-w-lg leading-relaxed font-light">
-            I build scalable, modern web applications specializing in <span className="text-white">E-commerce</span>, <span className="text-white">ERP</span>, and <span className="text-white">OTA</span> platforms using <span className="text-white border-b border-orange-500/50">Next.js</span>, <span className="text-white">Nest Js</span> and <span className="text-white border-b border-orange-500/50">Laravel</span>.
+            I build scalable, modern web applications specializing in <span className="text-white">E-commerce</span>, <span className="text-white">ERP</span>, and <span className="text-white">OTA</span> platforms using <span className="text-white border-b border-orange-500/50">Next.js</span>, <span className="text-white border-b border-orange-500/50">Nest Js</span> and <span className="text-white border-b border-orange-500/50">Laravel</span>.
           </p>
 
           <div className="flex flex-wrap gap-6">
