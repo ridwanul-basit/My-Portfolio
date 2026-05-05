@@ -1,66 +1,10 @@
 "use client";
 
-import { useState } from "react";
-
-interface Project {
-  title: string;
-  description: string;
-  image: string;
-  github: string;
-  demo: string;
-  tags: string[];
-  hasImage: boolean;
-}
+import { projects } from "@/data/projects";
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 
 export default function Projects() {
-  const projects: Project[] = [
-    {
-      title: "Giant BD ERP",
-      description: "Enterprise Resource Planning (ERP) system designed to manage business operations efficiently. Supports scalable and modular system architecture.",
-      image: "/projects/giant-bd.png",
-      github: "https://github.com/ridwanul-basit",
-      demo: "https://bxone0001.pythonanywhere.com/",
-      tags: ["Next.js", "Nest JS", "REST API", "PostgreSQL"],
-      hasImage: true,
-    },
-    {
-      title: "Finger Flight",
-      description: "Online Travel Agency (OTA) platform for managing flight bookings with a modern full-stack architecture, user authentication, and dynamic booking.",
-      image: "/projects/OTA-1.png",
-      github: "https://github.com/ridwanul-basit",
-      demo: "https://fingerflight.org/",
-      tags: ["Next.js", "Laravel Api", "API Integration"],
-      hasImage: true,
-    },
-    {
-      title: "STC 360",
-      description: "Full-stack web application with MVC architecture. Implemented authentication, role-based access control, and dynamic data handling.",
-      image: "/projects/STC360.png",
-      github: "https://github.com/ridwanul-basit",
-      demo: "https://stc360.org/",
-      tags: ["Laravel", "MySQL", "Bootstrap"],
-      hasImage: true,
-    },
-    {
-      title: "E-Commerce Platform",
-      description: "A comprehensive e-commerce solution with product management, shopping cart, and secure checkout features.",
-      image: "/projects/E-commerce.png",
-      github: "https://github.com/ridwanul-basit",
-      demo: "https://jananifashionbd.com/",
-      tags: ["Next.js", "Tailwind", "Laravel"],
-      hasImage: true,
-    },
-    {
-      title: "Online Health Care",
-      description: "Platform connecting patients with healthcare providers, featuring appointment scheduling and medical record management.",
-      image: "/projects/health.png",
-      github: "https://github.com/ridwanul-basit",
-      demo: "#",
-      tags: ["PHP", "MySQL", "JavaScript"],
-      hasImage: false,
-    },
-  ];
-
   return (
     <section id="projects" key="projects-section" className="py-24 px-6 md:px-12 bg-[#121212]">
       <div className="container mx-auto max-w-6xl">
@@ -73,9 +17,9 @@ export default function Projects() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, idx) => (
+          {projects.map((project) => (
             <div
-              key={project.title}
+              key={project.id}
               className="tech-card rounded-2xl overflow-hidden flex flex-col group transition-all"
             >
               <div className="w-full overflow-hidden border-b border-white/5 relative bg-[#1e1e1e]">
@@ -92,7 +36,14 @@ export default function Projects() {
                     <span className="text-slate-500 font-mono text-sm uppercase tracking-widest">Project Preview</span>
                   </div>
                 )}
-                <div className="absolute inset-0 bg-orange-500/10 opacity-0 group-hover:opacity-100 transition-opacity" />
+                <Link 
+                  href={`/projects/${project.id}`}
+                  className="absolute inset-0 bg-orange-500/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
+                >
+                  <div className="bg-[#121212] p-4 rounded-full text-orange-500 transform translate-y-4 group-hover:translate-y-0 transition-transform">
+                    <ArrowUpRight size={24} />
+                  </div>
+                </Link>
               </div>
 
               <div className="p-6 flex flex-col flex-grow">
@@ -116,21 +67,19 @@ export default function Projects() {
                   </div>
 
                   <div className="flex gap-4 pt-4 border-t border-white/5">
+                    <Link 
+                      href={`/projects/${project.id}`}
+                      className="text-orange-500 hover:text-orange-400 transition-colors flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest"
+                    >
+                      View Details
+                    </Link>
                     <a 
                       href={project.github} 
                       target="_blank" 
                       rel="noreferrer" 
-                      className="text-slate-500 hover:text-white transition-colors flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest"
+                      className="text-slate-500 hover:text-white transition-colors flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest ml-auto"
                     >
                       Code
-                    </a>
-                    <a 
-                      href={project.demo} 
-                      target="_blank" 
-                      rel="noreferrer" 
-                      className="text-orange-500 hover:text-orange-400 transition-colors flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest"
-                    >
-                      Live Demo
                     </a>
                   </div>
                 </div>

@@ -19,8 +19,10 @@ export default function Hero() {
       <div className="container mx-auto max-w-5xl z-10 grid md:grid-cols-2 gap-12 items-center">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: false }}
           transition={{ duration: 0.8 }}
+          className="z-10"
         >
           <div className="flex items-center gap-3 mb-6">
             <span className="text-orange-500 font-mono text-sm tracking-widest uppercase">00. Introduction</span>
@@ -57,7 +59,8 @@ export default function Hero() {
 
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: false }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="relative order-first md:order-last mb-12 md:mb-0"
         >
