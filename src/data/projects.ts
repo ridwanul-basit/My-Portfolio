@@ -81,84 +81,96 @@ export const projects: Project[] = [
   {
     id: "stc-360",
     title: "STC 360",
-    description: "Full-stack web application with MVC architecture. Implemented authentication and RBAC.",
-    fullDescription: "STC 360 is a robust business management platform built with an MVC architecture. It provides a 360-degree view of business operations, focusing on user management, data consistency, and secure access to sensitive information.",
+    description: "Online education platform designed to provide students with access to online classes, courses, and resources.",
+    fullDescription: "STC360 is a complete digital learning solution designed to provide students with flexible, accessible, and centralized access to education. It modernizes traditional learning systems by providing a structured environment for course enrollment, live/recorded classes, automated quizzes, and certification, connecting students and administrators through a single efficient system.",
     image: "/projects/STC360.png",
     github: "https://github.com/ridwanul-basit",
     demo: "https://stc360.org/",
     tags: ["Laravel", "MySQL", "Bootstrap"],
     features: [
-      "MVC (Model-View-Controller) design pattern",
-      "Granular Role-Based Access Control (RBAC)",
-      "Comprehensive activity logging and auditing",
-      "Dynamic data tables with advanced filtering",
-      "Exportable reports in multiple formats (PDF/CSV)"
+      "Online Class System: Support for live and recorded sessions with an organized course-wise structure",
+      "Course Management: System for both Bundle Courses and Normal single-course purchases",
+      "Student Panel: Personalized dashboard for attending classes, taking quizzes, and downloading certificates",
+      "Admin Panel: Full platform control including course creation, student enrollment, and content management",
+      "Quiz & Evaluation: Automated quiz system with integrated result tracking and grading",
+      "Certificate Generation: Automated generation and distribution of completion certificates",
+      "Role-Based Access: Secure permission system for Admins, Students, and Staff"
     ],
     challenges: [
-      "Refactoring legacy code into a modern MVC structure",
-      "Maintaining high security standards for user data",
-      "Ensuring database integrity with complex transaction logic"
+      "Building a scalable video delivery system for online classes",
+      "Handling complex course bundle logic and purchase synchronization",
+      "Implementing an automated and secure certificate generation engine"
     ],
     benefits: [
-      "Complete visibility into user activities and operations",
-      "Secure and scalable infrastructure for business data",
-      "Faster administrative tasks through automation"
+      "Easy access to quality education anytime and anywhere",
+      "Highly organized course and student management for administrators",
+      "Automated certification process reducing administrative workload",
+      "Scalable architecture ready for growing student populations",
+      "Significantly improved and structured learning experience"
     ],
     hasImage: true,
   },
   {
     id: "janani-fashion",
     title: "E-Commerce Platform",
-    description: "A comprehensive e-commerce solution with product management, shopping cart, and secure checkout.",
-    fullDescription: "Built for Janani Fashion, this platform is a modern e-commerce solution designed for speed and conversion. It offers a seamless shopping experience from product discovery to secure checkout, optimized for both desktop and mobile users.",
+    description: "Complete E-commerce system with separate Admin and User panels for global product selling.",
+    fullDescription: "This comprehensive E-commerce platform is designed to modernize traditional retail by enabling 24/7 global sales. It features a seamless User Site for customers to browse, customize, and purchase products, alongside a powerful Admin Panel that centralizes product management, order fulfillment, and sales analytics into one automated workflow.",
     image: "/projects/E-commerce.png",
     github: "https://github.com/ridwanul-basit",
     demo: "https://jananifashionbd.com/",
     tags: ["Next.js", "Tailwind", "Laravel"],
     features: [
-      "SEO-optimized product and category pages",
-      "Dynamic shopping cart and wishlist functionality",
-      "Multiple payment gateway integrations",
-      "Order tracking system for customers",
-      "Admin dashboard for product and order management"
+      "User Site: Dynamic product browsing with category filtering and real-time variant selection (size, color)",
+      "Shopping Cart & Checkout: Full cart management with coupon code support and secure multi-method payments",
+      "Admin Product Management: Full CRUD operations for products with complex variant and price control",
+      "Coupon & Discount System: Centralized engine for creating and managing usage-limited discount rules",
+      "Order Fulfillment: Real-time order tracking and management from pending to delivered status",
+      "Admin Dashboard: High-level overview of total sales, customer activity, and revenue reports",
+      "Role-Based Permissions: Granular access control for Super Admins, Managers, and Staff"
     ],
     challenges: [
-      "Optimizing image loading for faster page speeds",
-      "Implementing real-time inventory synchronization",
-      "Designing a mobile-first user experience for high engagement"
+      "Implementing complex product variant logic that updates prices and availability dynamically",
+      "Building a secure and efficient coupon validation system for high-traffic sales",
+      "Developing a responsive mobile-first UI that maintains high performance across all devices"
     ],
     benefits: [
-      "Increased online sales and customer engagement",
-      "Streamlined order fulfillment and inventory tracking",
-      "Enhanced brand presence with a modern UI"
+      "Ability to sell products globally without time or location limits",
+      "Easily manage massive inventories and orders from a single dashboard",
+      "Significantly improved customer experience through personalization",
+      "Fully automated business workflows reducing manual administrative work",
+      "Data-driven decision making through integrated sales and transaction reports"
     ],
     hasImage: true,
   },
   {
     id: "online-health-care",
     title: "Online Health Care",
-    description: "Platform connecting patients with healthcare providers, featuring appointment scheduling and medical record management.",
-    fullDescription: "Online Health Care is a specialized healthcare management platform designed to bridge the gap between patients and medical professionals. It provides a digital ecosystem for booking appointments, managing medical history, and facilitating communication between doctors and patients.",
+    description: "Multi-role healthcare platform for online appointments, medicine sales, and centralized management.",
+    fullDescription: "The Online Healthcare Platform is a complete digital solution that bridges the gap between patients, medical professionals, and pharmacies. It solves traditional healthcare challenges like long wait times and poor accessibility by providing a centralized system for online appointment booking, digital medicine purchasing, and streamlined service management.",
     image: "/projects/health.png",
     github: "https://github.com/ridwanul-basit",
     demo: "#",
     tags: ["PHP", "MySQL", "JavaScript", "HTML/CSS"],
     features: [
-      "Patient registration and profile management",
-      "Real-time doctor appointment scheduling",
-      "Electronic Medical Record (EMR) system",
-      "Doctor's dashboard for patient management",
-      "Secure messaging and consultation logs"
+      "Appointment System: Seamless booking, cancellation, and rescheduling engine for patients and doctors",
+      "Medicine E-commerce: Full marketplace for pharmacies to list medicines and for patients to purchase them",
+      "Doctor Dashboard: Dedicated interface for managing schedules, time slots, and patient consultations",
+      "Seller Dashboard: Specialized inventory and order management system for pharmacy owners",
+      "Admin Control: Centralized panel for approving doctor registrations and monitoring system-wide activity",
+      "Order Tracking: Real-time status updates for both medical appointments and medicine deliveries",
+      "Four-Way Role System: Granular access and unique workflows for Patients, Doctors, Sellers, and Admins"
     ],
     challenges: [
-      "Ensuring high security and privacy for sensitive patient data",
-      "Designing an efficient doctor scheduling algorithm",
-      "Creating a mobile-responsive interface for patients on the go"
+      "Building a complex multi-role authentication and permission system",
+      "Ensuring real-time synchronization between doctor availability and patient booking slots",
+      "Integrating a secure and reliable medicine inventory system with e-commerce functionality"
     ],
     benefits: [
-      "Improved patient access to medical care",
-      "Reduced wait times through digital scheduling",
-      "Centralized medical records for better diagnosis"
+      "Saves significant time for patients through remote booking and purchasing",
+      "Provides easy and direct access to medical professionals anytime",
+      "Ensures medicine availability and convenience through online ordering",
+      "Highly efficient and centralized healthcare management for administrators",
+      "Secured and organized data handling for all medical and financial records"
     ],
     hasImage: false,
   }
