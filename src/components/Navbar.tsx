@@ -1,10 +1,13 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -24,17 +27,23 @@ export default function Navbar() {
     { name: "Contact", href: "#contact" },
   ];
 
+  const getLinkHref = (href: string) => {
+    if (href.startsWith("/")) return href;
+    if (href.startsWith("#")) return `/${href}`;
+    return href;
+  };
+
   return (
     <header
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
         isScrolled
           ? "bg-[#121212]/90 backdrop-blur-md shadow-lg py-3 border-b border-white/5"
           : "bg-transparent py-5"
       }`}
     >
-      <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
-        <a
-          href="#"
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-12">
+        <Link
+          href="/"
           className="flex items-center gap-4 group"
         >
           <div className="w-16 h-16 rounded-full border-2 border-orange-500 overflow-hidden relative group-hover:scale-110 transition-transform shadow-[0_0_20px_rgba(249,115,22,0.2)] bg-[#1e1e1e]">
@@ -47,18 +56,18 @@ export default function Navbar() {
           <span className="text-xl font-bold text-white group-hover:text-orange-500 transition-colors font-mono tracking-tighter">
             BASIT.
           </span>
-        </a>
+        </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex gap-8">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.name}
-              href={link.href}
+              href={getLinkHref(link.href)}
               className="text-slate-300 hover:text-white transition-colors text-sm font-medium tracking-wide"
             >
               {link.name}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -81,14 +90,14 @@ export default function Navbar() {
             className="absolute top-full left-0 w-full bg-[#121212]/95 backdrop-blur-xl border-b border-white/5 py-8 flex flex-col items-center gap-6 md:hidden shadow-2xl"
           >
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.href}
+                href={getLinkHref(link.href)}
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-slate-300 hover:text-white text-lg font-medium w-full text-center py-2"
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
           </motion.div>
         )}

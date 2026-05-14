@@ -13,6 +13,7 @@ export interface Project {
   hasImage: boolean;
   demoStatus?: "live" | "private" | "not-live";
   codeStatus?: "public" | "private";
+  featured?: boolean;
 }
 
 export const projects: Project[] = [
@@ -48,7 +49,8 @@ export const projects: Project[] = [
     ],
     hasImage: true,
     demoStatus: "private",
-    codeStatus: "private"
+    codeStatus: "private",
+    featured: true
   },
   {
     id: "finger-flight",
@@ -82,7 +84,8 @@ export const projects: Project[] = [
     ],
     hasImage: true,
     demoStatus: "private",
-    codeStatus: "private"
+    codeStatus: "private",
+    featured: true
   },
   {
     id: "dbl-lifestyle-ecommerce",
@@ -120,7 +123,8 @@ export const projects: Project[] = [
     ],
     hasImage: true,
     demoStatus: "not-live",
-    codeStatus: "private"
+    codeStatus: "private",
+    featured: true
   },
   {
     id: "stc-360",
@@ -155,7 +159,8 @@ export const projects: Project[] = [
     ],
     hasImage: true,
     demoStatus: "live",
-    codeStatus: "private"
+    codeStatus: "private",
+    featured: true
   },
   {
     id: "janani-fashion",
@@ -189,7 +194,8 @@ export const projects: Project[] = [
     ],
     hasImage: true,
     demoStatus: "not-live",
-    codeStatus: "public"
+    codeStatus: "public",
+    featured: true
   },
   {
     id: "online-health-care",
@@ -223,6 +229,7 @@ export const projects: Project[] = [
     ],
     hasImage: false,
     demoStatus: "not-live",
-    codeStatus: "public"
+    codeStatus: "public",
+    featured: true
   }
 ];

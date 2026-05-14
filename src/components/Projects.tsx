@@ -1,24 +1,55 @@
 "use client";
 
-import { projects } from "@/data/projects";
 import Link from "next/link";
 import { ArrowUpRight, Info } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
+import type { Project } from "@/data/projects";
+import { projects } from "@/data/projects";
 
-export default function Projects() {
+type ProjectsProps = {
+  projectList?: Project[];
+  showAllButton?: boolean;
+  title?: string;
+  subtitle?: string;
+};
+
+export default function Projects({
+  projectList,
+  showAllButton = true,
+  title = "Projects",
+  subtitle = "Featured work I’ve built with real production value."
+}: ProjectsProps) {
+  const visibleProjects = projectList ?? projects.filter((project) => project.featured);
+
   return (
     <section id="projects" key="projects-section" className="py-24 px-6 md:px-12 bg-[#121212]">
       <div className="container mx-auto max-w-6xl">
         <div className="mb-16">
-          <div className="flex items-center gap-3 mb-2">
-            <span className="text-orange-500 font-mono text-sm">04.</span>
-            <h2 className="text-3xl md:text-5xl font-bold text-white uppercase tracking-tighter">Projects</h2>
+          <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+            <div>
+              <div className="flex items-center gap-3 mb-2">
+                <span className="text-orange-500 font-mono text-sm">04.</span>
+                <h2 className="text-3xl md:text-5xl font-bold text-white uppercase tracking-tighter">{title}</h2>
+              </div>
+              {subtitle ? (
+                <p className="max-w-3xl text-slate-400 leading-relaxed">{subtitle}</p>
+              ) : null}
+            </div>
+
+            {showAllButton ? (
+              <Link
+                href="/projects"
+                className="inline-flex items-center justify-center rounded-full border border-orange-500/30 bg-orange-500/5 px-6 py-3 text-sm font-mono uppercase tracking-widest text-orange-300 transition hover:border-orange-500 hover:bg-orange-500/10 hover:text-orange-100"
+              >
+                All Projects
+              </Link>
+            ) : null}
           </div>
-          <div className="w-20 h-1 bg-orange-500 rounded-full"></div>
+          <div className="w-20 h-1 bg-orange-500 rounded-full mt-6"></div>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project) => (
+          {visibleProjects.map((project) => (
             <div
               key={project.id}
               className="tech-card rounded-2xl overflow-hidden flex flex-col group transition-all"
@@ -26,10 +57,10 @@ export default function Projects() {
               <div className="w-full overflow-hidden border-b border-white/5 relative bg-[#1e1e1e]">
                 {project.hasImage ? (
                   <div className="relative w-full">
-                    <img 
-                      src={project.image} 
-                      alt={project.title} 
-                      className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500" 
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
                 ) : (
@@ -37,7 +68,7 @@ export default function Projects() {
                     <span className="text-slate-500 font-mono text-sm uppercase tracking-widest">Project Preview</span>
                   </div>
                 )}
-                <Link 
+                <Link
                   href={`/projects/${project.id}`}
                   className="absolute inset-0 bg-orange-500/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
                 >
@@ -68,13 +99,13 @@ export default function Projects() {
                   </div>
 
                   <div className="flex gap-4 pt-4 border-t border-white/5 items-center">
-                    <Link 
+                    <Link
                       href={`/projects/${project.id}`}
                       className="text-orange-500 hover:text-orange-400 transition-colors flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest"
                     >
                       Details
                     </Link>
-                    
+
                     <div className="ml-auto flex items-center gap-4">
                       {project.codeStatus === "private" ? (
                         <div className="group relative">
@@ -86,10 +117,10 @@ export default function Projects() {
                           </div>
                         </div>
                       ) : (
-                        <a 
-                          href={project.github} 
-                          target="_blank" 
-                          rel="noreferrer" 
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noreferrer"
                           className="text-slate-500 hover:text-white transition-colors flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest"
                         >
                           <FaGithub size={14} />
