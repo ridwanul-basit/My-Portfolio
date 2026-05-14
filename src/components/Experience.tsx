@@ -13,7 +13,8 @@ export default function Experience() {
       achievements: [
         "Developed and maintained multiple production-level systems including ERP, OTA, and internal management tools.",
         "Built STC 360 using Laravel (MVC architecture), implementing authentication and structured backend logic.",
-        "Designed and developed Giant BD ERP, a scalable enterprise system using Next.js and Laravel REST APIs.",
+        "Built Giant BD ERP, a scalable enterprise resource planning system using Next.js and NestJS with a focus on modular architecture, performance optimization, and maintainability.",
+        "Built and maintained DBL Lifestyle, a scalable eCommerce solution using Next.js and NestJS with optimized backend architecture and responsive frontend design.",
         "Contributed to Finger Flights (OTA platform), implementing API integrations, frontend features, and dynamic booking workflows.",
       ]
     }
