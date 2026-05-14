@@ -41,10 +41,10 @@ export default function ProjectDetails() {
       return (
         <div className="group relative">
           <button className="px-8 py-4 bg-slate-800 text-slate-500 font-bold uppercase tracking-widest cursor-not-allowed flex items-center gap-2">
-            Not Live <Info size={16} />
+            Live Demo <Info size={16} />
           </button>
-          <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-64 p-3 bg-[#1e1e1e] border border-orange-500/30 text-slate-300 text-xs rounded-lg opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity pointer-events-none z-50 text-center shadow-xl">
-            This project is not currently live. Please see the source code for details.
+          <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-72 p-3 bg-[#1e1e1e] border border-orange-500/30 text-slate-300 text-xs rounded-lg opacity-0 group-hover:opacity-100 group-active:opacity-100 transition-opacity pointer-events-none z-50 text-center shadow-xl">
+            Development ongoing — not live yet.
           </div>
         </div>
       );

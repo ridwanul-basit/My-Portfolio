@@ -85,9 +85,48 @@ export const projects: Project[] = [
     codeStatus: "private"
   },
   {
+    id: "dbl-lifestyle-ecommerce",
+    title: "DBL Lifestyle E-commerce",
+    description: "A modern lifestyle shopping platform built with Next.js frontend and NestJS backend, powered by PostgreSQL and WebSocket.",
+    fullDescription: "DBL Lifestyle E-commerce is an online shopping platform developed to sell lifestyle and fashion-related products through a modern digital system. The platform provides customers with an easy shopping experience while allowing administrators to efficiently manage products, orders, inventory, and business operations. It was created to provide 24/7 online shopping access, simplify product and order management, improve customer experience, and increase sales through digital commerce.",
+    image: "/projects/DBL.png",
+    github: "#",
+    demo: "#",
+    tags: ["Next.js", "Nest JS", "PostgreSQL", "WebSocket"],
+    features: [
+      "Product Management: Admin can create, update, and manage products with name, price, description, images, category, and variants",
+      "Category & Brand Management: Organize products by category and brand for easier customer navigation",
+      "User Authentication: Secure registration and login with account management",
+      "Shopping Cart & Wishlist: Add products to cart, update quantities, remove items, and save favorites",
+      "Order Management: Place orders online and track pending, confirmed, shipped, and delivered status",
+      "Payment System: Supports online payment integration and cash on delivery with a secure checkout process",
+      "Coupon & Discount System: Admin-created coupons and user-applied discount codes during checkout",
+      "Inventory Management: Monitor stock, prevent out-of-stock issues, and update inventory automatically after sales",
+      "Admin Panel: Full system control for products, orders, customers, discounts, and reports",
+      "Dashboard & Reports: Sales reports, order statistics, revenue overview, and customer activity monitoring",
+      "Role-Based Permissions: Admin, Manager, and Staff access levels for secure workflow control"
+    ],
+    challenges: [
+      "Implementing a scalable frontend and backend architecture for modern e-commerce requirements",
+      "Building real-time order and inventory updates using WebSocket integration",
+      "Designing a centralized admin panel that supports comprehensive product, order, and report management"
+    ],
+    benefits: [
+      "Easy online shopping experience with 24/7 access",
+      "Faster order processing and improved customer satisfaction",
+      "Better inventory management and prevention of stock issues",
+      "Centralized business control through a unified admin dashboard",
+      "Increased sales and operational efficiency for online retail"
+    ],
+    hasImage: true,
+    demoStatus: "not-live",
+    codeStatus: "private"
+  },
+  {
     id: "stc-360",
     title: "STC 360",
     description: "Online education platform designed to provide students with access to online classes, courses, and resources.",
+
     fullDescription: "STC360 is a complete digital learning solution designed to provide students with flexible, accessible, and centralized access to education. It modernizes traditional learning systems by providing a structured environment for course enrollment, live/recorded classes, automated quizzes, and certification, connecting students and administrators through a single efficient system.",
     image: "/projects/STC360.png",
     github: "#",
