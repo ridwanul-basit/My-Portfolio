@@ -13,7 +13,7 @@ export default function Skills() {
     {
       title: "Backend Development",
       icon: <Server className="text-orange-500" size={24} />,
-      skills: ["PHP" , "Laravel", "Node.js", "Express.js", "NestJS",  "Django", "Python"],
+      skills: ["PHP" , "Laravel", "Go", "Java", "Node.js", "Express.js", "NestJS",  "Django", "Python"],
     },
     {
       title: "Database & DevOps",
@@ -23,7 +23,7 @@ export default function Skills() {
     {
       title: "Programming",
       icon: <Terminal className="text-orange-500" size={24} />,
-      skills: ["Python", "PHP", "C++", "SQL"],
+      skills: ["Python", "PHP", "C++", "Go", "Java", "SQL"],
     },
     {
       title: "Software & Tools",
