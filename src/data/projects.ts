@@ -53,6 +53,42 @@ export const projects: Project[] = [
     featured: true
   },
   {
+    id: "ispahani-banglabid",
+    title: "Ispahani Banglabid",
+    description: "Competition management platform for Bengali language contests, exams, certificates, and scholarship workflows.",
+    fullDescription: "Ispahani Banglabid is a comprehensive educational competition management platform developed to manage large-scale Bengali language competitions and academic programs. The system enables organizers to handle participant registration, examinations, quizzes, result processing, certificate generation, and scholarship management through a centralized digital platform.",
+    image: "/projects/Banglabid.png",
+    github: "#",
+    demo: "#",
+    tags: ["Next.js", "Nest JS", "PostgreSQL", "Admin Panel"],
+    features: [
+      "Student registration with institution and guardian information handling",
+      "Competition creation, scheduling, and exam management in one system",
+      "Online quizzes and tests with multiple question formats and automated scoring",
+      "Result generation, ranking, merit list preparation, and performance analytics",
+      "Automated certificate generation, distribution, and authenticity verification",
+      "Scholarship recipient management and award publication workflows",
+      "Role-based access control for Super Admin, Organizer, Evaluator, and Participant",
+      "Notifications, reminders, and announcements for participants and administrators"
+    ],
+    challenges: [
+      "Automating large-scale competition workflows across registration, exams, and results",
+      "Managing data consistency for participants, institutions, and scholarship records",
+      "Designing intuitive role-based access for multiple user types and managers"
+    ],
+    benefits: [
+      "Centralized competition management with real-time oversight",
+      "Reduced manual administrative effort and faster result publication",
+      "Accurate participant tracking and performance reporting",
+      "Improved experience for students, organizers, and evaluators",
+      "Scalable platform for nationwide educational competitions"
+    ],
+    hasImage: true,
+    demoStatus: "not-live",
+    codeStatus: "private",
+    featured: true
+  },
+  {
     id: "finger-flight",
     title: "Finger Flight",
     description: "Online Travel Agency (OTA) platform for managing flight bookings with a modern full-stack architecture.",
